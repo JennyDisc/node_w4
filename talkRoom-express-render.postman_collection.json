@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "506145a3-2794-4742-ad69-f0c142f4a723",
+		"name": "talkRoom-express-render",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29835428"
+	},
+	"item": [
+		{
+			"name": "GET取得post",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://node-w3.onrender.com/posts",
+					"protocol": "https",
+					"host": [
+						"node-w3",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST新增單筆post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\":\"6630ac10bd75de0e845aaf80\",\r\n    \"location\":\"台北市\",\r\n    \"type\":\"group\",\r\n    \"tags\":\"迷因\",\r\n    \"content\":\"我是測試資料\",\r\n    \"image\":\"http://dummyimage.com/197x100.png/dddddd/000000\",\r\n    \"likes\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://node-w3.onrender.com/posts",
+					"protocol": "https",
+					"host": [
+						"node-w3",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DEL刪除全部post",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://node-w3.onrender.com/posts",
+					"protocol": "https",
+					"host": [
+						"node-w3",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DEL刪除指定post",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://node-w3.onrender.com/posts/662697cb6194ef0af47f9ab1",
+					"protocol": "https",
+					"host": [
+						"node-w3",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"posts",
+						"662697cb6194ef0af47f9ab1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH修改指定post",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\":\"6630ac10bd75de0e845aaf80\",\r\n    \"location\":\"台北市\",\r\n    \"type\":\"group\",\r\n    \"tags\":\"迷因\",\r\n    \"content\":\"我修改了~~\",\r\n    \"image\":\"http://dummyimage.com/197x100.png/dddddd/000000\",\r\n    \"likes\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://node-w3.onrender.com/posts/66269ebe20481c1a7b2d7691",
+					"protocol": "https",
+					"host": [
+						"node-w3",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"posts",
+						"66269ebe20481c1a7b2d7691"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
