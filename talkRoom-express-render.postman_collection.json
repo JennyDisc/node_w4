@@ -12,10 +12,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://node-w3.onrender.com/posts",
+					"raw": "https://node-w4.onrender.com/posts",
 					"protocol": "https",
 					"host": [
-						"node-w3",
+						"node-w4",
 						"onrender",
 						"com"
 					],
@@ -41,10 +41,10 @@
 					}
 				},
 				"url": {
-					"raw": "https://node-w3.onrender.com/posts",
+					"raw": "https://node-w4.onrender.com/posts",
 					"protocol": "https",
 					"host": [
-						"node-w3",
+						"node-w4",
 						"onrender",
 						"com"
 					],
@@ -61,10 +61,10 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "https://node-w3.onrender.com/posts",
+					"raw": "https://node-w4.onrender.com/posts",
 					"protocol": "https",
 					"host": [
-						"node-w3",
+						"node-w4",
 						"onrender",
 						"com"
 					],
@@ -81,10 +81,10 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "https://node-w3.onrender.com/posts/662697cb6194ef0af47f9ab1",
+					"raw": "https://node-w4.onrender.com/posts/662697cb6194ef0af47f9ab1",
 					"protocol": "https",
 					"host": [
-						"node-w3",
+						"node-w4",
 						"onrender",
 						"com"
 					],
@@ -111,10 +111,10 @@
 					}
 				},
 				"url": {
-					"raw": "https://node-w3.onrender.com/posts/66269ebe20481c1a7b2d7691",
+					"raw": "https://node-w4.onrender.com/posts/66269ebe20481c1a7b2d7691",
 					"protocol": "https",
 					"host": [
-						"node-w3",
+						"node-w4",
 						"onrender",
 						"com"
 					],
