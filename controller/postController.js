@@ -6,7 +6,15 @@ const successHandle = require("../service/successHandle");
 
 const postController = {
     async getPosts(req, res) {
-        const allposts = await Post.find().populate('user');
+        // 排序
+        // asc 遞增(由小到大，由舊到新) createdAt ; 
+        // desc 遞減(由大到小、由新到舊) "-createdAt"
+        const timeSortData = req.query.timeSort === 'asc' ? 'createdAt' : '-createdAt';
+
+        // 關鍵字查詢
+        const keywords = req.query.keywords !== undefined ? { "content": new RegExp(req.query.keywords) } : {};
+        
+        const allposts = await Post.find(keywords).populate('user').sort(timeSortData);
         successHandle(res, allposts);
     },
     async postPosts(req, res) {

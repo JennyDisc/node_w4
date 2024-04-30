@@ -125,6 +125,36 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "GET取得post(排序,關鍵字)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://node-w4.onrender.com/posts?timeSort=asc&keywords=修改",
+					"protocol": "https",
+					"host": [
+						"node-w4",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"posts"
+					],
+					"query": [
+						{
+							"key": "timeSort",
+							"value": "asc"
+						},
+						{
+							"key": "keywords",
+							"value": "修改"
+						}
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
