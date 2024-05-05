@@ -1,8 +1,8 @@
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-var cors = require('cors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const cors = require('cors');
 require('./connections/index');
 
 // 路由
@@ -10,7 +10,7 @@ const indexRouter = require('./routes/index');
 const postsRouter = require('./routes/postRoute');
 
 // 使用 express
-var app = express();
+const app = express();
 
 // 使用 express 功能
 app.use(logger('dev'));
