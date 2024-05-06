@@ -24,7 +24,9 @@ const postController = {
             const postCanDo = await User.findById(data.user, 'name length').exec();
             // 輸入非 users collection 的 ID 時回傳 null (無法執行新增)
             if (postCanDo !== null) {
-                if (data.content.trim() !== undefined) {
+                if (data.content !== undefined || data.content.trim() !== "")
+                // if (data.content.trim() !== undefined)
+                {
                     const newPost = await Post.create(
                         {
                             user: data.user,
@@ -67,17 +69,21 @@ const postController = {
         }
     },
     async deletePosts(req, res) {
-        const id = req.params.id;
-        const idResult = await Post.findByIdAndDelete(id);
-        // 找到可刪除的會回傳那筆的物件內容。找不到可刪除的則回傳 null
-        // console.log(idResult);
-        if (idResult !== null) {
-            successHandle(res, null);
+        try {
+            const id = req.params.id;
+            const idResult = await Post.findByIdAndDelete(id);
+            // 找到可刪除的會回傳那筆的物件內容。找不到可刪除的則回傳 null
+            // console.log(idResult);
+            if (idResult !== null) {
+                successHandle(res, null);
 
-        } else {
-            const message = '查無該筆貼文 id';
-            errorHandle(res, message);
-        };
+            } else {
+                const message = '查無該筆貼文 id';
+                errorHandle(res, message);
+            };
+        } catch (error) {
+            errorHandle(res, error);
+        }
     },
     async patchPosts(req, res) {
         try {
@@ -87,7 +93,7 @@ const postController = {
             const idResult = await Post.findById(id);
             // 找到這筆 id 會回傳那筆的物件內容。找不到則回傳 null
             // console.log(idResult);
-            if (data.content.trim() !== undefined && idResult !== null) {
+            if (data.content.trim() !== undefined && idResult !== null && data.content.trim() !== "") {
                 // 寫法1
                 // await Post.findByIdAndUpdate(
                 //     id,
