@@ -24,7 +24,7 @@ const postController = {
             const postCanDo = await User.findById(data.user, 'name length').exec();
             // 輸入非 users collection 的 ID 時回傳 null (無法執行新增)
             if (postCanDo !== null) {
-                if (data.content !== undefined || data.content.trim() !== "")
+                if (data.content !== undefined && data.content.trim() !== "")
                 // if (data.content.trim() !== undefined)
                 {
                     const newPost = await Post.create(
