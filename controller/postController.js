@@ -121,7 +121,7 @@ const postController = {
                         image: data.image,
                         likes: data.likes
                     },
-                    { new: true }
+                    { new: true, runValidators: true }
                 );
                 successHandle(res, newPost);
             } else {
